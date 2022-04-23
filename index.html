@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+</head>
+<body>
+    <h3>Contact Form</h3>
+
+    <div class="container">
+            <label for="initial_amount"> Invest Ammount </label>
+            <input type="number" id="initial_amount" name="initial_amount" required>
+
+            <label for="contract_fee"> Contract Fee </label>
+            <input type="number" id="contract_fee" name="contract_fee" required>
+
+            <label for="start_year"> Start Year </label>
+            <input type="number" id="start_year" name="start_year" required>
+
+            <label for="range"> How long? (Range) </label>
+            <input type="number" id="range" name="range" required>
+
+            <label for="year_term"> Year Term </label>
+            <input type="number" id="year_term" name="year_term" required>
+
+            <label for="plan1"> Plan Part 1 </label>
+            <select id="plan1" name="plan1" required>
+                <option value="" disabled selected hidden> Choose A Plan ... </option>
+                <option value="Buffer Rate"> Buffer Rate </option>
+                <option value="Floor Rate"> Floor Rate </option>
+                <option value="Downside Participation Rate"> Downside Participation Rate</option>
+            </select>
+
+            <label for="rate1"> Rate for Part 1 </label>
+            <input type="number" id="rate1" name="rate1" required>
+
+            <label for="plan2"> Part Part 2 </label>
+            <select id="plan2" name="plan2" required >
+                <option value="" disabled selected hidden> Choose A Plan ... </option>
+                <option value="Cap Rate"> Cap Rate </option>
+                <option value="Participation Rate"> Participation Rate </option>
+                <option value="Step Rate"> Step Rate </option>
+            </select>
+
+            <label for="rate2"> Rate for Part 2 </label>
+            <input type="number" id="rate2" name="rate2" required>
+
+            <input type="submit" value="Submit" onclick="create_chart()">
+    </div>
+
+    <p id="test1"> </p>
+    <p id="test2"> </p>
+
+    <canvas id="myChart" width="400" height="400"></canvas>
+
+    <script src="index.js"></script>
+</body>
+</html>
